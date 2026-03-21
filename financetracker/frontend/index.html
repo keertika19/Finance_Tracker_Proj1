@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Finance Tracker</title>
+    <style>
+      /* ===== Global Reset ===== */
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f8fa;
+      }
+
+      /* ===== Navbar Styling ===== */
+      nav {
+        background: linear-gradient(90deg, #007bff, #00c4ff);
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+        font-weight: 500;
+        transition: color 0.3s, transform 0.3s;
+      }
+
+      nav a:hover {
+        color: #ffe082;
+        transform: scale(1.1);
+      }
+
+      /* ===== Title Style ===== */
+      h1 {
+        text-align: center;
+        margin-top: 2rem;
+        color: #333;
+      }
+
+      /* ===== Root container (React mounts here) ===== */
+      #root {
+        padding: 1rem;
+      }
+
+      /* ===== Responsive adjustments ===== */
+      @media (max-width: 600px) {
+        nav a {
+          display: block;
+          margin: 0.5rem 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/">🏠 Home</a>
+      <a href="http://localhost:5000/about" target="_blank">ℹ️ About</a>
+      <a href="http://localhost:5000/login" target="_blank">🔐 Login</a>
+    </nav>
+
+    <h1>Welcome to Your Personal Finance Tracker</h1>
+    <div id="root"></div>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
